@@ -1,0 +1,18 @@
+export(constructDesignMatrix)
+export(computeSmallWorldness)
+export(testMutationalPatternAll.wrapper)
+export(computeSurvivalPValueForGenePairSet.output)
+export(processDataMutSurv)
+export(computeSurvivalPValueGenePairAll.output)
+export(computeSurvivalPValueOneGenePair)
+export(computeSurvivalPValueOneGenePair.output)
+
+import(systemfit)
+import(survival)
+import(igraph)
+import(qvalue)
+import(reshape2)
+
+importFrom("graphics", "legend", "plot", "text")
+importFrom("stats", "binom.test", "pchisq")
+importFrom("utils", "write.table")
