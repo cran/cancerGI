@@ -1,6 +1,6 @@
 \name{RNAi}
 \alias{RNAi}
-\docType{data}
+%\docType{data}
 \title{
 Molecular phenotypes from single and double knockdowns in RNAi screen
 }
@@ -8,7 +8,8 @@ Molecular phenotypes from single and double knockdowns in RNAi screen
 Single and double siRNA knockdowns were performed for genes and gene pairs.  Multiple molecular phenotypes, such as the number of cells, cell size, nucleus size, etc., were measured.  
 }
 %%\usage{data (RNAi)}
-\format{
+%\format{
+\value{
   A data matrix with each row a knockdown experiment.
 }
 \references{
@@ -47,12 +48,22 @@ RNAi$nsize <- 2^RNAi.tmp$nsize
 rm (RNAi.tmp)
 
 # create formula from column names
+# using all columns
+#eqlog2n <- as.formula (paste ("RNAi$n ~ ", 
+#	paste (colnames (my_matrix), collapse="+"), sep=''))
+#eqlog2csize <- as.formula (paste ("RNAi$csize ~ ", 
+#	paste (colnames (my_matrix), collapse="+"), sep=''))
+#eqnsize <- as.formula (paste ("RNAi$nsize ~ ", 
+#	paste (colnames (my_matrix), collapse="+"), sep=''))
+	
+# test run with the first 500 columns
 eqlog2n <- as.formula (paste ("RNAi$n ~ ", 
-	paste (colnames (my_matrix), collapse="+"), sep=''))
+	paste (colnames (my_matrix)[1:500], collapse="+"), sep=''))
 eqlog2csize <- as.formula (paste ("RNAi$csize ~ ", 
-	paste (colnames (my_matrix), collapse="+"), sep=''))
+	paste (colnames (my_matrix)[1:500], collapse="+"), sep=''))
 eqnsize <- as.formula (paste ("RNAi$nsize ~ ", 
-	paste (colnames (my_matrix), collapse="+"), sep=''))
+	paste (colnames (my_matrix)[1:500], collapse="+"), sep=''))
+	
 system <- list (cell.number = eqlog2n, cell.size = eqlog2csize, nuc.size=eqnsize)
 
 # perform seemingly unrelated regression
@@ -71,9 +82,17 @@ nsize_coef_q <- qvalue (nsize_fitsur_coef[,4])$qvalues
 # build three matrices of results
 log2n_fitsur_coef <- data.frame (log2n_fitsur_coef, qvalue=log2n_coef_q)
 colnames (log2n_fitsur_coef) <- c("Estimate", "StdError", "tValue", "pValue", "qValue")
+dim (log2n_fitsur_coef)
+head (log2n_fitsur_coef)
+
 log2csize_fitsur_coef <- data.frame (log2csize_fitsur_coef, qvalue=log2csize_coef_q)
 colnames (log2csize_fitsur_coef) <- c("Estimate", "StdError", "tValue", "pValue", "qValue")
+dim (log2csize_fitsur_coef)
+head (log2csize_fitsur_coef)
+
 nsize_fitsur_coef <- data.frame (nsize_fitsur_coef, qvalue=nsize_coef_q)
 colnames (nsize_fitsur_coef) <- c("Estimate", "StdError", "tValue", "pValue", "qValue")
+dim (nsize_fitsur_coef)
+head (nsize_fitsur_coef)
 }
 }

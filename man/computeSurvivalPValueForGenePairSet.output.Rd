@@ -57,6 +57,7 @@ Audrey Q. Fu, Xiaoyue Wang
 }
 
 \examples{
+\dontrun{
 data (mutations)
 data (survival)
 
@@ -70,4 +71,5 @@ computeSurvivalPValueForGenePairSet.output (file.out="tmp.txt",
 	tested_pairs, data.mut=mutations, data.surv=survival, 
 	type.gene1=1, type.gene2=(-1), groups="Two")
 
+}
 }

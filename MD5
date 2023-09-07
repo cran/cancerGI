@@ -1,4 +1,4 @@
-220b03c745425562e7a59dd89a5a0540 *DESCRIPTION
+ff614624d98092305d5696ee055aed2d *DESCRIPTION
 f468b6b93580b820b352b691625bd7b7 *NAMESPACE
 67b9b1e7826fc1edb44dd7df76df80a9 *R/computeSmallWorldness.R
 08cb358b29c8e369f154c688406ab580 *R/computeSurvivalPValueForGenePairSet.output.R
@@ -17,16 +17,15 @@ e2af623a5b0a10af549e8fec94baebb2 *data/RNAi.rda
 d52942214f57131c785f40d51509bb37 *data/mutations.rda
 9bfa57c8ecc9e9cc0f08ed626390280a *data/survival.rda
 aa2125b4a7ce7ee27298d02bcf646165 *data/tested_pairs.rda
-ee265ffd2d55edc69e7e60ef45b65d83 *man/RNAi.Rd
-8c912ce52fa4bb78a091dea206becda9 *man/cancerGI-package.Rd
+dfacc7967122064381c7174d09b27e27 *man/RNAi.Rd
 8fafa25e1608fca51643f7399b1fed62 *man/computeSmallWorldness.Rd
-5d663380839b79cde0022c4ddb80dd02 *man/computeSurvivalPValueForGenePairSet.output.Rd
+06f45405df89ea56f5916128428ab05f *man/computeSurvivalPValueForGenePairSet.output.Rd
 1e136089cbfe467e5cbc9db045daa44f *man/computeSurvivalPValueGenePairAll.output.Rd
-e5e14df50afc062b64bd80616f7978e8 *man/computeSurvivalPValueOneGenePair.Rd
-eba514c399764a9061d1db9d39cf53c1 *man/computeSurvivalPValueOneGenePair.output.Rd
+3d253b8705a0d5d833edbcd7b0119321 *man/computeSurvivalPValueOneGenePair.Rd
+64dac214b0a8b56fcc25845a837884f4 *man/computeSurvivalPValueOneGenePair.output.Rd
 7b468dabdd6e8df8f09f74cf2eccd6c1 *man/constructDesignMatrix.Rd
 3dcd46b567492182c8a7d4eb8409587c *man/mutations.Rd
-dc9cefce6b3e3179eb46807573835f1f *man/processDataMutSurv.Rd
+0393f0bcb02546900f2e2470d8f8533e *man/processDataMutSurv.Rd
 2550dec36a112c4ab2e58393706d62c7 *man/survival.Rd
 d1b8954fa947603180d655453920f679 *man/testMutationalPatternAll.wrapper.Rd
 eee6219ad4c0de9e8109b36a762ecb12 *man/tested_pairs.Rd
